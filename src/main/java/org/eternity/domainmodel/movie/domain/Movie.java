@@ -19,7 +19,7 @@ public class Movie {
     private Integer runningTime;
     private Money fee;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name="POLICY_ID")
     private DiscountPolicy discountPolicy;
 
